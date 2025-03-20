@@ -18,7 +18,7 @@ jobs:
         run: | 
           echo "I will fail!"
           exit 0
-    steps:
+          
       - name: "Say Goodbye"
         run: echo "Goodbye, World!"
       
