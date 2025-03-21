@@ -1,0 +1,16 @@
+name: 04 - Using Actions
+
+on:
+    push:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+
+            - name: Printing Floders
+              run: tree -L 2 || ls -R
+           
