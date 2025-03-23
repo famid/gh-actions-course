@@ -20,5 +20,10 @@ jobs:
               run: npm ci
               working-directory: ./04-using-actions/react-app
 
+            - name: Run Unit Tests
+              run: |
+                cd ./04-using-actions/react-app
+                npm run test
+
 
            
