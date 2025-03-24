@@ -18,5 +18,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ""
-        run: ehoc "Running whenever a Pr is opened or synchronized  AND base branch is main."
+      - name: "Testing Event Filters and Activity Types"
+        run: echo "Running whenever a Pr is opened or synchronized  AND base branch is main."
