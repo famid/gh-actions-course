@@ -1,0 +1,22 @@
+name: 05 - 1- Event Filters and Activity Types
+
+# - multiple events filter follow the and logic
+# - multiple activity types filter follow the or logic
+# - the combination of multiple events and activity types follow the and logic 
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+
+jobs:
+
+  echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ""
+        run: ehoc "Running whenever a Pr is opened or synchronized  AND base branch is main."
