@@ -10,10 +10,17 @@ on:
           description: 'Debug mode'
           required: false
           default: 'false'
+env:
+    MY_WORKFLOW_VAR: 'my workflow'
+    MY_OVERWRITTEN_VAR: 'workflow'
 
 jobs:
     echo-data:
         runs-on: ubuntu-latest
+
+        env:
+            MY_JOB_VAR: 'my job'
+            MY_OVERWRITTEN_VAR: 'job'
 
         steps:
             - name: Display Information
@@ -29,4 +36,12 @@ jobs:
             - name: Retrieve Variable
               run : | 
                   echo "Variable value: ${{ vars.MY_VAR }}"
-
+            - name: Print Env Variables
+              env:
+                  MY_STEP_VAR: 'my step'
+                  MY_OVERWRITTEN_VAR: 'step'
+              run: |
+                echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+                echo "Job env: ${{ env.MY_JOB_VAR }}"
+                echo "Step env: ${{ env.MY_STEP_VAR }}"
+                echo: "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
