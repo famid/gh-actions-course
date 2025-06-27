@@ -2,13 +2,15 @@ name: '01 Building Blocks'
 on: workflow_dispatch
 
 jobs:
-  - name: 'Echo Hello'
+  echo-hello:
+    name: 'Echo Hello'
     runs-on: ubuntu-latest
     steps:
       - name: 'Say Hello'
         run: echo "Hello, World!"
   
-  - name: 'Say Goodbye'
+  echo-goodbye:
+    name: 'Say Goodbye'
     runs-on: ubuntu-latest
     steps:
       - name: 'Failed step'
