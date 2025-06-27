@@ -1,0 +1,50 @@
+# this is task 1 solution
+users:
+  - name: 'example 1'
+    age: 30
+    skills:
+      - 'Team Player'
+      - 'Problem Solver'
+      - 'Quick Learner'
+  - name: 'example 2'
+    age: 25
+    skills:
+      - 'Analytical Thinker'
+      - 'Creative Mind'
+
+# this is task 2 solution
+seatings:
+  -
+    row1:
+      - Alice
+      - Bob
+    row2:
+      - Charlie
+      - Dave
+    row3:
+      - Eve
+      - Frank
+# this is task 3 solution
+
+name: 'product1'
+price: 19.99
+in_stock: true
+specs:
+  dimensions:
+    width: 10
+    height: 5
+    depth: 2
+  manufacturer:
+    name: 'TechCorp'
+    country: 'USA'
+
+# this is task 4 solution
+message1: |
+  Welcome
+  to our app.
+
+  Enjoy your stay!
+
+message2: >
+  Line 1
+  Line 2 continues
