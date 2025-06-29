@@ -3,20 +3,19 @@ on: workflow_dispatch
 
 jobs:
   echo-hello:
-    name: 'Echo Hello'
     runs-on: ubuntu-latest
     steps:
       - name: 'Say Hello'
         run: echo "Hello, World!"
   
   echo-goodbye:
-    name: 'Say Goodbye'
+    name: 'Say Goodbyee'
     runs-on: ubuntu-latest
     steps:
-      - name: 'Failed step'
+      - name: ' step'
         run: echo |
-          "I will fail!"
-          exit 1
+          "I will succeed!"
+          exit 0
 
       - name: 'Say Goodbye'
         run: echo "Goodbye, World!"
