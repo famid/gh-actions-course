@@ -1,7 +1,7 @@
 name: '03 - workflow runner'
 
 on:
-  workflow_dispatch::
+  workflow_dispatch:
 
 jobs:
   ubuntu-echo:
