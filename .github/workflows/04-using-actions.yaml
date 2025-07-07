@@ -1,31 +1,15 @@
-name: '03 - workflow runner'
+name: 04-using-action
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
-  ubuntu-echo:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: 'Show os'
-        run: | 
-          echo "This job is running on an ubuntu runner"
-          echo "Runner OS: $RUNNER_OS"
 
-  
-  windoes-echo:
-    runs-on: windows-latest
     steps:
-      - name: 'Show os'
-        shell: bash
-        run: | 
-          echo "This job is running on a windows runner"
-          echo "Runner OS: $RUNNER_OS"
-  
-  macos-echo:
-    runs-on: macos-latest
-    steps:
-      - name: 'Show os'
-        run: |
-          echo "This job is running on a macos runner"
-          echo "Runner OS: $RUNNER_OS"
+      - name: 'Using the checkout action'
+        uses: action/checkout@v4
+      
+      - name: 'Printing folders'
+        run: ls
